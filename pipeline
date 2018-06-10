@@ -1,0 +1,21 @@
+node('vagrant'){
+    stage('getting code') {
+    build job: 'Gettingcode'
+    }
+    stage('codestability') {
+    build job: 'Gettingcodestability'
+    }
+    stage('codequality') {
+    build job: 'Gettingcodequality'
+    }
+    stage('code coverage') {
+    build job: 'Gettingcodeanalysis'
+    }
+    stage('deployement') {
+    build job: 'Gettingdeployment'
+    }
+    stage('serverrestart') {
+    build job: 'Gettingserverrestart'
+    }
+    
+}
