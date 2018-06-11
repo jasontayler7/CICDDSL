@@ -1,4 +1,5 @@
 mavenJob('Gettingcodeanalysis') {
+label('vagrant')
   customWorkspace('/home/vagrant/slave/workspace/taskworkspace')
     jdk('java-8')
   goals('install') 

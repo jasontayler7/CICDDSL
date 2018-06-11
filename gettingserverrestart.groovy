@@ -1,4 +1,5 @@
 job('Gettingserverrestart') {
+label('label')
     steps {
         publishOverSsh {
             server('192.168.33.10') {

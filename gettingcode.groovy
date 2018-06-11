@@ -1,4 +1,5 @@
 job('Gettingcode') {
+label('vagrant')
     customWorkspace('/home/vagrant/slave/workspace/taskworkspace/')
 
     scm {
