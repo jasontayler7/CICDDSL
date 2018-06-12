@@ -107,7 +107,7 @@ job('Gettingserverrestart') {
 label('label')  
     steps {  
         publishOverSsh {  
-            server('192.168.33.10') {  
+            server('192.168.0.87') {  
                 transferSet {  
                     execCommand('sudo syatemctl restart tomcat')  
                 }  
