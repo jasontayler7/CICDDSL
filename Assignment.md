@@ -7,9 +7,10 @@
 #### It enables user authorization using a Role-Based strategy. Roles can be defined globally or for particular jobs or nodes selected by regular expressions. 
 
 ![Plugin](/media/rolebasedstrategyplugin.png)  
-![Users](/media/Team_a_user.png)  
+![Users](/media/Team_a_user.png)
+![Manage and Assign Roles](media/rolepermissions.png)
 ![Assign Roles](/media/userrolepermission.png)  
-![Manage and Assign Roles](media/rolepermissions.png)  
+  
 
 
 ==============================================================================================================================================
