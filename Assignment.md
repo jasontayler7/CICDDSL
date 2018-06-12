@@ -28,32 +28,32 @@
 
 #### DSL to clone the repo in custom directory
 
-job('Gettingcode') {
-label('vagrant')
-    customWorkspace('/home/vagrant/slave/workspace/taskworkspace/')
+job('Gettingcode') {  
+label('vagrant')  
+    customWorkspace('/home/vagrant/slave/workspace/taskworkspace/')  
 
-    scm {
+    scm {  
         
-      git{
+      git{  
         
-        remote
+        remote 
         
-         {
-            url('https://github.com/Team-A-Ninja/ContinuousIntegration.git')
+         {  
+            url('https://github.com/Team-A-Ninja/ContinuousIntegration.git')  
         
-         }
+         }  
             branch('master')  
-         }
-       }
+         }  
+       }  
 
-    steps 
+    steps  
   
-  		{      
+  		{  
           
-		shell('ls -la' )
+		shell('ls -la' )  
 	
-          }
-}
+          }  
+}  
 
 ----------------------------------------------------------------------------------------------------------------------------------------------
 
