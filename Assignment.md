@@ -1,6 +1,6 @@
 # Tasks
 
-## Install Jenkins Role Based Plugin and assign different roles to different users.
+1. ## Install Jenkins Role Based Plugin and assign different roles to different users.
 
 ### What is Jenkins Role based blugin?
 
@@ -15,10 +15,9 @@
 
 ==============================================================================================================================================
 
+## 2 Clone git repo and perform CICD
 
-## Clone git repo and perform CICD
-
-### Steps to be performed using DSL job
+### 2.1 Steps to be performed using DSL job
 
   - Clone the repo in custom directory
   - Check code Stability
@@ -27,7 +26,7 @@
   - Create a Pipeline to perform above tasks and deploy code
 
 
-#### DSL to clone the repo in custom directory
+#### 2.2 DSL to clone the repo in custom directory
 
 job('Gettingcode') {  
 label('vagrant')  
@@ -46,7 +45,7 @@ label('vagrant')
 
 ----------------------------------------------------------------------------------------------------------------------------------------------
 
-#### DSL to Check code Stability
+#### 2.3 DSL to Check code Stability
 
 
 mavenJob('Gettingcodeanalysis') {  
@@ -61,7 +60,7 @@ label('vagrant')
 
 ----------------------------------------------------------------------------------------------------------------------------------------------
 
-#### DSL to Check code Quality
+#### 2.4 DSL to Check code Quality
 
 mavenJob('Gettingcodeanalysis') {  
 label('vagrant')  
@@ -76,7 +75,7 @@ label('vagrant')
 
 ----------------------------------------------------------------------------------------------------------------------------------------------
 
-#### DSL to Check code Coverage
+#### 2.5 DSL to Check code Coverage
 
 
 mavenJob('Gettingcodeanalysis') {  
@@ -91,7 +90,7 @@ label('vagrant')
 
 ----------------------------------------------------------------------------------------------------------------------------------------------
 
-#### Deployment DSL
+#### 2.6 Deployment DSL
 
 job('Gettingdeployment'){  
 label('vagrant')  
@@ -102,7 +101,7 @@ label('vagrant')
 
 ----------------------------------------------------------------------------------------------------------------------------------------------
 
-#### DSL to restart server after deployment
+#### 2.7 DSL to restart server after deployment
 
 job('Gettingserverrestart') {  
 label('label')  
@@ -119,7 +118,7 @@ label('label')
 
 ----------------------------------------------------------------------------------------------------------------------------------------------
 
-## Pipeline DSL for CD
+## 2.8 Pipeline DSL for CD
 
 node('vagrant'){  
     stage('getting code') {  
@@ -149,12 +148,12 @@ node('vagrant'){
 
 ----------------------------------------------------------------------------------------------------------------------------------------------
 
-## Above task was performed by a master on slave machine
+## 3. Above task was performed by a master on slave machine
 
 ![Slave](/media/jobsonslave.png)  
 
 ---------------------------------------------------------------------------------------------------------------------------
-## Deployment
+## 4. Deployment
 
 ![Deployment](/media/deployement.png)  
 
